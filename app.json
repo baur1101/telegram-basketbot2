@@ -1,0 +1,21 @@
+{
+  "name": "Telegram BasketBot",
+  "description": "Бот для прогнозов на баскетбол. Разворачивается на Heroku.",
+  "repository": "https://github.com/baur1101/telegram-basketbot3",
+  "env": {
+    "TOKEN": {
+      "description": "Токен Telegram-бота",
+      "required": true
+    },
+    "DATABASE_URL": {
+      "description": "Ссылка на PostgreSQL (Heroku Postgres)",
+      "required": true
+    }
+  },
+  "addons": ["heroku-postgresql:hobby-dev"],
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ]
+}
